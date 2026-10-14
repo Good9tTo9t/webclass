@@ -12,20 +12,25 @@
 
             .container {
                 position: relative;
-                width: 500px;
-                border-radius: 50%;
+                width: 30%;
+                min-width: 220px;
+                border-radius: 12px;
+                overflow: hidden;
+            }
+
+            .container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: cover;
             }
 
             .overlay {
                 position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                width: 500px;
+                inset: 0;
                 opacity: 0;
                 transition: .5s ease;
-                background-color: #008CBA;
+                background-color: rgba(0, 140, 186, 0.8);
             }
 
             .container:hover .overlay {
@@ -44,19 +49,28 @@
                 text-align: center;
             }
 
-
-
             .gallery {
-                display: flex;
-                justify-content: center;
-                gap: 20px;
                 padding: 20px;
             }
 
-            .gallery img{
+            .gallery h2 {
+                margin-bottom: 20px;
+            }
+
+            .gallery-items {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .gallery-items img{
                 width: 30%;
+                min-width: 220px;
                 height: auto;
                 object-fit: cover;
+                border-radius: 12px;
             }
 
             .paragraph {
@@ -144,7 +158,7 @@
                 <ul class="nav">
                     <li><a href="#discover">Discover</a></li>
                     <li><a href="#neighbourhoods">Neighbourhoods</a></li>
-                    <li><a href="gallery">Gallery</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                 </ul>
             </div>
         </header>
@@ -180,22 +194,19 @@
         </section>
 
         <section id="gallery" class="gallery">
-            
-            
-            <h2>03 Gallery</h2><br>
-            
-            <div class="gallery">
+            <h2>03 Gallery</h2>
+
+            <div class="gallery-items">
                 <div class="container">
                     <img src="images/tainan-salt.jpg">
                     <div class="overlay">
                         <div class="overlay-text">SALT.</div>
                     </div>
                 </div>
-                
+
                 <img src="images/tainan-hero.jpg">
                 <img src="images/tainan-street.jpg">
             </div>
-            
         </section>
     </body>
 
