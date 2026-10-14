@@ -1,0 +1,203 @@
+<html>
+
+    <head>
+        <title>Tainan City</title>
+
+        <style>
+
+            body{
+                width: 75%;
+                margin: 0 auto;
+            }
+
+            .container {
+                position: relative;
+                width: 500px;
+                border-radius: 50%;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 500px;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #008CBA;
+            }
+
+            .container:hover .overlay {
+                opacity: 1;
+            }
+
+            .overlay-text{
+                color: white;
+                font-size: 50px;
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+
+
+            .gallery {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .gallery img{
+                width: 30%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .paragraph {
+                display: flex;
+                align-items: center; /* Aligns items vertically in the center */
+                gap: 40px; /* Adds space between the image and the text */
+                padding: 40px; /* Optional: adds some breathing room around the section */
+            }
+
+            .para-image {
+                width: 50%; /* Makes the image take up half the width */
+                object-fit: cover;
+                border-radius: 10%; /* Optional: adds a slight curve to the image edges */
+            }
+
+            .text-content {
+                width: 50%; /* Makes the text take up the other half */
+            }
+
+            .topbar .topbar-contents{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 30px;
+            }
+
+            .nav{
+                display: flex;
+                gap: 30px;
+                list-style: none;
+            }
+
+            .brand{
+                font-size: 40px;
+            }
+
+
+            .hero{
+                position: relative;
+                height: 540px;
+
+                background-image: url("images/tainan-hero.jpg");
+                background-size: cover;
+                background-position: center;
+
+                display: flex;
+                align-items: center;
+            }
+
+            .hero-overlay{
+                position: absolute;
+
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+                background: linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0.85),
+                    rgba(0, 0, 0, 0.1)
+                );
+
+            }
+
+            .hero-content{
+                position: relative;
+                color: #FFF;
+                padding: 60px;
+                width: 15%;
+            }
+
+            .hero-content h1{
+                font-size: 60px;
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <header class="topbar">
+            <div class="topbar-contents">
+                <a class="brand">TAINAN.</a>
+
+                <ul class="nav">
+                    <li><a href="#discover">Discover</a></li>
+                    <li><a href="#neighbourhoods">Neighbourhoods</a></li>
+                    <li><a href="gallery">Gallery</a></li>
+                </ul>
+            </div>
+        </header>
+
+
+        <section class="hero">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1>The<br>Timeless<br>City.</h1>
+                <p>An intimate exploration of centuries-old traditions, iconic architecture, and unforgettable culture.</p>
+            </div>
+        </section>
+
+        <section id="discover" class="paragraph">
+            <img src="images/tainan-salt.jpg" class="para-image">
+            
+            <div class="text-content">
+                <h2>01 Discover</h2>
+                <p>Jingzaijiao Tile-paved Salt Fields <br><br>Located in Beimen, Tainan, these iconic salt fields feature geometric shallow pools filled with neatly stacked pyramids of harvested salt. As the sun sets on the horizon, glowing golden light fills the sky and reflects off the calm waters, creating a peaceful, picture-perfect coastal landscape.</p>
+            </div>
+        </section>
+
+        <section id="neighbourhoods" class="paragraph">
+            
+            
+            <div class="text-content">
+                <h2>02 Neighbourhoods</h2>
+                <p>Shennong Street<br><br>Capturing the charming atmosphere of one of Tainan's best-preserved historic alleys, Shennong Street features traditional two-story wooden shophouses adorned with red lanterns and vintage accents. Visitors casually stroll along the narrow cobblestone path, soaking in the blend of historic architecture, local culture, and modern boutique energy.</p>
+            </div>
+
+            <img src="images/tainan-street.jpg" class="para-image">
+        </section>
+
+        <section id="gallery" class="gallery">
+            
+            
+            <h2>03 Gallery</h2><br>
+            
+            <div class="gallery">
+                <div class="container">
+                    <img src="images/tainan-salt.jpg">
+                    <div class="overlay">
+                        <div class="overlay-text">SALT.</div>
+                    </div>
+                </div>
+                
+                <img src="images/tainan-hero.jpg">
+                <img src="images/tainan-street.jpg">
+            </div>
+            
+        </section>
+    </body>
+
+
+</html>

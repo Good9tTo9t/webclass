@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>The Quokka</title>
+        <title>Image Layout And Effects</title>
 
         <style>
             .right{
@@ -20,6 +20,49 @@
             .divs{
                 overflow: hidden;
             }
+
+            .container {
+                position: relative;
+                width: 500px;
+                border-radius: 50%;
+            }
+
+            .image {
+                display: block;
+                width: 500px;
+                height: auto;
+                border-radius: 50%;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 500px;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #008CBA;
+                border-radius: 50%;
+            }
+
+            .container:hover .overlay {
+                opacity: 1;
+                border-radius: 50%;
+            }
+
+            .text{
+                color: white;
+                font-size: 50px;
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
         </style>
     </head>
 
@@ -36,5 +79,17 @@
             <img src="images/rottnest island coast.jpeg" class="left">
             <span>Quokkas are mainly found on Rottnest Island and some other nearby islands in Western Australia. They live in bushland, grasslands, and coastal areas where there is plenty of food and shelter.</span>
         </div>
+        <hr>
+
+        <h1>他是誰？</h1>
+
+        <div class="container">
+            <img src="images/13陳鏞基2026.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+              <div class="text">陳鏞基</div>
+            </div>
+        </div>
+
+
     </body>
 </html>
