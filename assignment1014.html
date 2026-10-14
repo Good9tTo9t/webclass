@@ -1,13 +1,118 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
     <head>
+        <meta charset="UTF-8">
         <title>Tainan City</title>
 
         <style>
 
-            body{
+            body {
                 width: 75%;
                 margin: 0 auto;
+                font-family: system-ui, -apple-system, sans-serif;
+            }
+
+            .topbar .topbar-contents {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 30px;
+                padding: 20px 0;
+            }
+
+            .nav {
+                display: flex;
+                gap: 30px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav a {
+                text-decoration: none;
+                color: #333;
+                font-size: 18px;
+            }
+
+            .brand {
+                font-size: 40px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #000;
+            }
+
+            .hero {
+                position: relative;
+                height: 540px;
+                background-image: url("images/tainan-hero.jpg");
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+            }
+
+            .hero-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(
+                    to right,
+                    rgba(0, 0, 0, 0.85),
+                    rgba(0, 0, 0, 0.1)
+                );
+            }
+
+            .hero-content {
+                position: relative;
+                color: #FFF;
+                padding: 60px;
+                width: 35%;
+            }
+
+            .hero-content h1 {
+                font-size: 60px;
+                margin-top: 0;
+                line-height: 1.1;
+            }
+
+            .paragraph {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                padding: 60px 0;
+            }
+
+            .para-image {
+                width: 50%;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+
+            .text-content {
+                width: 50%;
+            }
+
+            .text-content h2 {
+                font-size: 32px;
+                margin-top: 0;
+            }
+
+            .gallery {
+                padding: 60px 0;
+            }
+
+            .gallery h2 {
+                font-size: 32px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .gallery-items {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                flex-wrap: wrap;
             }
 
             .container {
@@ -20,7 +125,7 @@
 
             .container img {
                 width: 100%;
-                height: auto;
+                height: 250px;
                 display: block;
                 object-fit: cover;
             }
@@ -29,123 +134,25 @@
                 position: absolute;
                 inset: 0;
                 opacity: 0;
-                transition: .5s ease;
-                background-color: rgba(0, 140, 186, 0.8);
+                transition: opacity .4s ease;
+                background-color: rgba(0, 140, 186, 0.85);
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .container:hover .overlay {
                 opacity: 1;
             }
 
-            .overlay-text{
+            .overlay-text {
                 color: white;
-                font-size: 50px;
-                position: absolute;
-                top: 80%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+                font-size: 28px;
+                font-weight: bold;
+                letter-spacing: 2px;
                 text-align: center;
             }
 
-            .gallery {
-                padding: 20px;
-            }
-
-            .gallery h2 {
-                margin-bottom: 20px;
-            }
-
-            .gallery-items {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-                flex-wrap: wrap;
-            }
-
-            .gallery-items img{
-                width: 30%;
-                min-width: 220px;
-                height: auto;
-                object-fit: cover;
-                border-radius: 12px;
-            }
-
-            .paragraph {
-                display: flex;
-                align-items: center; /* Aligns items vertically in the center */
-                gap: 40px; /* Adds space between the image and the text */
-                padding: 40px; /* Optional: adds some breathing room around the section */
-            }
-
-            .para-image {
-                width: 50%; /* Makes the image take up half the width */
-                object-fit: cover;
-                border-radius: 10%; /* Optional: adds a slight curve to the image edges */
-            }
-
-            .text-content {
-                width: 50%; /* Makes the text take up the other half */
-            }
-
-            .topbar .topbar-contents{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                font-size: 30px;
-            }
-
-            .nav{
-                display: flex;
-                gap: 30px;
-                list-style: none;
-            }
-
-            .brand{
-                font-size: 40px;
-            }
-
-
-            .hero{
-                position: relative;
-                height: 540px;
-
-                background-image: url("images/tainan-hero.jpg");
-                background-size: cover;
-                background-position: center;
-
-                display: flex;
-                align-items: center;
-            }
-
-            .hero-overlay{
-                position: absolute;
-
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-
-                background: linear-gradient(
-                    to right,
-                    rgba(0, 0, 0, 0.85),
-                    rgba(0, 0, 0, 0.1)
-                );
-
-            }
-
-            .hero-content{
-                position: relative;
-                color: #FFF;
-                padding: 60px;
-                width: 15%;
-            }
-
-            .hero-content h1{
-                font-size: 60px;
-            }
         </style>
     </head>
 
@@ -153,7 +160,7 @@
         
         <header class="topbar">
             <div class="topbar-contents">
-                <a class="brand">TAINAN.</a>
+                <a class="brand" href="#">TAINAN.</a>
 
                 <ul class="nav">
                     <li><a href="#discover">Discover</a></li>
@@ -162,7 +169,6 @@
                 </ul>
             </div>
         </header>
-
 
         <section class="hero">
             <div class="hero-overlay"></div>
@@ -174,23 +180,21 @@
         </section>
 
         <section id="discover" class="paragraph">
-            <img src="images/tainan-salt.jpg" class="para-image">
+            <img src="images/tainan-salt.jpg" class="para-image" alt="Salt Fields">
             
             <div class="text-content">
                 <h2>01 Discover</h2>
-                <p>Jingzaijiao Tile-paved Salt Fields <br><br>Located in Beimen, Tainan, these iconic salt fields feature geometric shallow pools filled with neatly stacked pyramids of harvested salt. As the sun sets on the horizon, glowing golden light fills the sky and reflects off the calm waters, creating a peaceful, picture-perfect coastal landscape.</p>
+                <p><strong>Jingzaijiao Tile-paved Salt Fields</strong><br><br>Located in Beimen, Tainan, these iconic salt fields feature geometric shallow pools filled with neatly stacked pyramids of harvested salt. As the sun sets on the horizon, glowing golden light fills the sky and reflects off the calm waters, creating a peaceful, picture-perfect coastal landscape.</p>
             </div>
         </section>
 
         <section id="neighbourhoods" class="paragraph">
-            
-            
             <div class="text-content">
                 <h2>02 Neighbourhoods</h2>
-                <p>Shennong Street<br><br>Capturing the charming atmosphere of one of Tainan's best-preserved historic alleys, Shennong Street features traditional two-story wooden shophouses adorned with red lanterns and vintage accents. Visitors casually stroll along the narrow cobblestone path, soaking in the blend of historic architecture, local culture, and modern boutique energy.</p>
+                <p><strong>Shennong Street</strong><br><br>Capturing the charming atmosphere of one of Tainan's best-preserved historic alleys, Shennong Street features traditional two-story wooden shophouses adorned with red lanterns and vintage accents. Visitors casually stroll along the narrow cobblestone path, soaking in the blend of historic architecture, local culture, and modern boutique energy.</p>
             </div>
 
-            <img src="images/tainan-street.jpg" class="para-image">
+            <img src="images/tainan-street.jpg" class="para-image" alt="Shennong Street">
         </section>
 
         <section id="gallery" class="gallery">
@@ -198,17 +202,28 @@
 
             <div class="gallery-items">
                 <div class="container">
-                    <img src="images/tainan-salt.jpg">
+                    <img src="images\tainan-park.jpg">
                     <div class="overlay">
-                        <div class="overlay-text">SALT.</div>
+                        <div class="overlay-text">Park</div>
                     </div>
                 </div>
 
-                <img src="images/tainan-hero.jpg">
-                <img src="images/tainan-street.jpg">
+                <div class="container">
+                    <img src="images\tainan-beefsoup.jpg">
+                    <div class="overlay">
+                        <div class="overlay-text">Food</div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <img src="images\tainan-ylmarket.jpg">
+                    <div class="overlay">
+                        <div class="overlay-text">Market</div>
+                    </div>
+                </div>
             </div>
         </section>
-    </body>
 
+    </body>
 
 </html>
