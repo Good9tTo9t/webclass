@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Image Filters</title>
+
+        <style>
+            .image-container {
+                position: relative;
+                display: inline-block; 
+            }
+
+            .filterpic {
+                display: block;
+                filter: grayscale(100%);
+                border: 5px solid #555;
+                border-radius: 50%;
+                transition: filter 0.3s ease;
+            }
+
+            .overlay {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: 24px;
+                margin: 0;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+            }
+
+            .image-container:hover .filterpic {
+                filter: blur(5px) grayscale(100%);
+            }
+
+            .image-container:hover .overlay {
+                opacity: 1;
+            }
+
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="image-container">
+            <img src="images/Lenna.jpg" class="filterpic" alt="Lenna">
+            <p class="overlay">Lenna</p>
+        </div>
+
+        <table>
+            <thead>
+                <th scope="col"></th>
+                <th scope="col">Monday</th>
+                <th scope="col">Tuesday</th>
+                <th scope="col">Wednesday</th>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <th scope="row">1pm</th>
+                    <td>Math</td>
+                    <td>Science</td>
+                    <td>Art</td>
+                </tr>
+                <tr>
+                    <th scope="row">2pm</th>
+                    <td>Science</td>
+                    <td colspan="2">Geography</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </body>
+</html>
