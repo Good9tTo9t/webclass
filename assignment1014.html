@@ -101,7 +101,7 @@
                 padding: 60px 0;
             }
 
-            .gallery h2 {
+            h2 {
                 font-size: 32px;
                 text-align: center;
                 margin-bottom: 30px;
@@ -153,6 +153,55 @@
                 text-align: center;
             }
 
+            /* Updated Table Styles */
+            table {
+                margin: 0 auto; /* Centers the table */
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+            }
+
+            th, td {
+                padding: 15px 10px;
+                border: 1px solid #ddd;
+            }
+
+            th {
+                background-color: darkgray;
+                color: white;
+                font-size: 18px;
+            }
+
+            tr:nth-child(even) {
+                background-color: lightgray;
+            }
+
+            tr:nth-child(odd) {
+                background-color: whitesmoke;
+            }
+
+            /* Itinerary Theme Colors */
+            .culture {
+                background-color: #fce5cd;
+            }
+
+            .nature {
+                background-color: #d9ead3;
+            }
+
+            .city {
+                background-color: #c9daf8;
+            }
+
+            .food {
+                background-color: #fff2cc;
+            }
+
+            /* Added spacing to schedule section */
+            #schedule {
+                padding-bottom: 60px;
+            }
+
         </style>
     </head>
 
@@ -166,6 +215,7 @@
                     <li><a href="#discover">Discover</a></li>
                     <li><a href="#historicstreets">Historic Streets</a></li>
                     <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#schedule">Itinerary</a></li>
                 </ul>
             </div>
         </header>
@@ -202,26 +252,70 @@
 
             <div class="gallery-items">
                 <div class="container">
-                    <img src="images\tainan-park.jpg">
+                    <img src="images\tainan-park.jpg" alt="Park">
                     <div class="overlay">
                         <div class="overlay-text">Park</div>
                     </div>
                 </div>
 
                 <div class="container">
-                    <img src="images\tainan-beefsoup.jpg">
+                    <img src="images\tainan-beefsoup.jpg" alt="Food">
                     <div class="overlay">
                         <div class="overlay-text">Food</div>
                     </div>
                 </div>
 
                 <div class="container">
-                    <img src="images\tainan-ylmarket.jpg">
+                    <img src="images\tainan-ylmarket.jpg" alt="Market">
                     <div class="overlay">
                         <div class="overlay-text">Market</div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="schedule">
+            <h2>04 Itinerary</h2>
+
+            <table>
+                <tr>
+                  <th>Time</th>
+                  <th>Day 1 (History & Culture)</th>
+                  <th>Day 2 (Nature & Scenery)</th>
+                  <th>Day 3 (Arts & City)</th>
+                </tr>
+                <tr>
+                  <td>09:00 AM</td>
+                  <td rowspan="2" class="culture">Anping Tree House &<br>Fort Zeelandia</td>
+                  <td rowspan="2" class="nature">Sicao Green Tunnel<br>Boat Tour</td>
+                  <td rowspan="2" class="city">Chimei Museum<br>Exhibitions</td>
+                </tr>
+                <tr>
+                  <td>10:30 AM</td>
+                </tr>
+                <tr>
+                  <td>12:00 PM</td>
+                  <td class="food">Local Tainan Beef Soup</td>
+                  <td class="food">Anping Seafood Market</td>
+                  <td class="food">Classic Danzai Noodles</td>
+                </tr>
+                <tr>
+                  <td>02:00 PM</td>
+                  <td rowspan="2" class="culture">Hayashi Department Store<br>& Confucius Temple</td>
+                  <td rowspan="2" class="nature">Jingzaijiao Tile-paved<br>Salt Fields</td>
+                  <td rowspan="2" class="city">Tainan Art Museum<br>(Building 2)</td>
+                </tr>
+                <tr>
+                  <td>04:00 PM</td>
+                </tr>
+                <tr>
+                  <td>06:00 PM</td>
+                  <td class="food">Shennong Street<br>Dinner & Walk</td>
+                  <td class="food">Tainan Flower Night Market</td>
+                  <td class="food">Departure</td>
+                </tr>
+              </table>
+
         </section>
 
     </body>
