@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Tainan City</title>
+
+        <link rel="stylesheet" href="style_lab6.css">
+    </head>
+
+    <body>
+        
+        <header class="topbar">
+            <div class="topbar-contents">
+                <a class="brand" href="#">TAINAN.</a>
+
+                <ul class="nav">
+                    <li><a href="#discover">Discover</a></li>
+                    <li><a href="#historicstreets">Historic Streets</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#schedule">Itinerary</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1>The<br>Timeless<br>City.</h1>
+                <p>An intimate exploration of centuries-old traditions, iconic architecture, and unforgettable culture.</p>
+            </div>
+        </section>
+
+        <section id="discover" class="paragraph">
+            <img src="images/tainan-salt.jpg" class="para-image" alt="Salt Fields">
+            
+            <div class="text-content">
+                <h2>01 Discover</h2>
+                <p><strong>Jingzaijiao Tile-paved Salt Fields</strong><br><br>Located in Beimen, Tainan, these iconic salt fields feature geometric shallow pools filled with neatly stacked pyramids of harvested salt. As the sun sets on the horizon, glowing golden light fills the sky and reflects off the calm waters, creating a peaceful, picture-perfect coastal landscape.</p>
+            </div>
+        </section>
+
+        <section id="historicstreets" class="paragraph">
+            <div class="text-content">
+                <h2>02 Historic Streets</h2>
+                <p><strong>Shennong Street</strong><br><br>Capturing the charming atmosphere of one of Tainan's best-preserved historic alleys, Shennong Street features traditional two-story wooden shophouses adorned with red lanterns and vintage accents. Visitors casually stroll along the narrow cobblestone path, soaking in the blend of historic architecture, local culture, and modern boutique energy.</p>
+            </div>
+
+            <img src="images/tainan-street.jpg" class="para-image" alt="Shennong Street">
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2>03 Gallery</h2>
+
+            <div class="gallery-items">
+                <div class="container">
+                    <img src="images\tainan-park.jpg" alt="Park">
+                    <div class="overlay">
+                        <div class="overlay-text">Park</div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <img src="images\tainan-beefsoup.jpg" alt="Food">
+                    <div class="overlay">
+                        <div class="overlay-text">Food</div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <img src="images\tainan-ylmarket.jpg" alt="Market">
+                    <div class="overlay">
+                        <div class="overlay-text">Market</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule">
+            <h2>04 Itinerary</h2>
+
+            <table>
+                <tr>
+                  <th>Time</th>
+                  <th>Day 1 (History & Culture)</th>
+                  <th>Day 2 (Nature & Scenery)</th>
+                  <th>Day 3 (Arts & City)</th>
+                </tr>
+                <tr>
+                  <td>09:00 AM</td>
+                  <td rowspan="2" class="culture">Anping Tree House &<br>Fort Zeelandia</td>
+                  <td rowspan="2" class="nature">Sicao Green Tunnel<br>Boat Tour</td>
+                  <td rowspan="2" class="city">Chimei Museum<br>Exhibitions</td>
+                </tr>
+                <tr>
+                  <td>10:30 AM</td>
+                </tr>
+                <tr>
+                  <td>12:00 PM</td>
+                  <td class="food">Local Tainan Beef Soup</td>
+                  <td class="food">Anping Seafood Market</td>
+                  <td class="food">Classic Danzai Noodles</td>
+                </tr>
+                <tr>
+                  <td>02:00 PM</td>
+                  <td rowspan="2" class="culture">Hayashi Department Store<br>& Confucius Temple</td>
+                  <td rowspan="2" class="nature">Jingzaijiao Tile-paved<br>Salt Fields</td>
+                  <td rowspan="2" class="city">Tainan Art Museum<br>(Building 2)</td>
+                </tr>
+                <tr>
+                  <td>04:00 PM</td>
+                </tr>
+                <tr>
+                  <td>06:00 PM</td>
+                  <!-- colspan="2" makes this cell stretch across Day 1 and Day 2 -->
+                  <td colspan="2" class="food">Tainan Night Markets<br>(Dinner, Shopping & Walk)</td>
+                  <td class="food">Departure</td>
+                </tr>
+            </table>
+
+            <h2>Estimated Expenses</h2>
+
+            <table class="budget-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Item</th>
+                        <th>Estimated Cost</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" class="category-cell"><strong>Transportation</strong></td>
+                        <td>Metro / Local Bus</td>
+                        <td class="cost-cell">NT$ 1,000</td>
+                    </tr>
+                    <tr>
+                        <td>Train / High-Speed Rail</td>
+                        <td class="cost-cell">NT$ 1,500</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" class="category-cell"><strong>Food</strong></td>
+                        <td>Lunch & Street Snacks</td>
+                        <td class="cost-cell">NT$ 1,200</td>
+                    </tr>
+                    <tr>
+                        <td>Dinner & Night Market</td>
+                        <td class="cost-cell">NT$ 2,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+    </body>
+
+</html>
