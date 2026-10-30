@@ -16,6 +16,10 @@ webclass/
 │   ├── services.html
 │   ├── portfolio.html
 │   └── contact.html
+├── multitable/         multiplication table demo
+│   ├── multitable.html
+│   ├── style.css
+│   └── script.js
 ├── labs/               standalone exercises
 │   ├── intro.html
 │   ├── lists.html
@@ -52,6 +56,7 @@ from any subdirectory (for example a GitHub Pages project path).
 | --- | --- |
 | `tainan/index.html` | Hero image, Flexbox sections, hover gallery, `rowspan`/`colspan` tables |
 | `pages/*.html` | Shared navigation bar and stylesheet across five pages |
+| `multitable/multitable.html` | JavaScript loops that generate a 9&times;9 multiplication table |
 | `labs/intro.html` | Text-level tags: `abbr`, `dfn`, `sub`, `sup`, `strong`, `em` |
 | `labs/lists.html` | Ordered, unordered, and description lists |
 | `labs/divs.html` | Flexbox rows and centred blocks |
