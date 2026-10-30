@@ -1,54 +1,175 @@
-<html>
-    <head>
-        <title>Self Introduction</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Programming Portfolio &mdash; Wu, I-Hung</title>
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    .hub {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
 
-        <style>
-            strong {
-                font-weight: bold;
-                font-size: large;
-                font-style: italic;
-            }
-            em {
-                font-size: italic;
-                color: blue;
-                background-color: yellow;
-            }
+    .hub-header {
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
 
-            
-        </style>
-    </head>
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #64748b;
+    }
 
-    <body>
-        <marquee
-            direction="down"
-            width="250"
-            height="200"
-            behavior="alternate"
-            style="border:solid">
-            <marquee behavior="alternate"><h1><b>WU, I-Hung</b></h1></marquee>
-        </marquee><br>
-        <hr>
-        <h2><b>Background</b></h2>
-        <h3><b>Education:</b></h3> 
-        <p>Studying <abbr title="Computer Science and Information Engineering">CSIE</abbr> at <abbr title="National Taipei University of Technology">NTUT</dfn>.</p>
-        <h3><b>Interests:</b></h3> 
-        <p>Watching <dfn title="Chinese Professional Baseball League, writer is a supporter of the Lions.">CPBL</dfn>, playing video games & writing code. </p>
-        <hr>
-        <h2><b>Skills</b></h2>
-        <h3><b>Natural Languages:</b></h3> 
-        <p>Knows Mandarin, Taiwanese Hokkien, English, and Latin.</p>
-        <h3><b>Progroamming Languages: </b></h3>
-        <p>Web, C++, C#, python. </p>
-        <hr>
-        <h2><b>Example of some HTML tags: </b></h2>
-        <p><i>Pay It Forward</i> is one of my favourite movies. I'm currently watching <i>House <abbr title="Medical Doctor">M. D.</abbr> </i></p>
-        <p>My heart has beaten roughly 7.36 &times 10<sup>8</sup> times.</p>
-        <p>The molecular formula of paracetamol, commonly known as Panadol, is C<sub>8</sub>H<sub>9</sub>NO<sub>2</sub>.<br>
-        <strong>THIS IS VERY IMPORTANT TEXT!!!!!!!!</strong><br>
-        <em>THIS IS EMPHASIZED TEXT!!!</em>
+    .hub-header h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0 0.75rem;
+      color: #0f172a;
+    }
 
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click me!!!</a>
-        
-        
-    </body>
+    .hub-header p {
+      max-width: 60ch;
+      color: #475569;
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      display: block;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #94a3b8;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      margin-bottom: 0.4rem;
+      color: #0f172a;
+    }
+
+    .card p {
+      font-size: 0.925rem;
+      color: #64748b;
+      margin: 0;
+    }
+
+    .card span {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #2563eb;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      color: #0f172a;
+    }
+
+    .lab-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .lab-list a {
+      display: block;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: #334155;
+      font-size: 0.9rem;
+    }
+
+    .lab-list a:hover {
+      border-color: #94a3b8;
+      color: #0f172a;
+    }
+
+    .hub-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="hub">
+    <header class="hub-header">
+      <p class="eyebrow">Web Programming &middot; 2026 Fall</p>
+      <h1>Wu, I-Hung</h1>
+      <p>
+        Coursework from the 2026 fall web programming class, split into the
+        finished project, a multi-page navigation demo, and the individual lab
+        exercises.
+      </p>
+    </header>
+
+    <section class="cards" aria-label="Projects">
+      <a class="card" href="tainan/index.html">
+        <h2>Tainan Travel Site</h2>
+        <p>Hero image, alternating text blocks, a hover gallery, and an itinerary with a budget table.</p>
+        <span>View project &rarr;</span>
+      </a>
+
+      <a class="card" href="pages/index.html">
+        <h2>Five-Page Demo</h2>
+        <p>A shared navigation bar and stylesheet across Home, About, Services, Portfolio, and Contact.</p>
+        <span>View project &rarr;</span>
+      </a>
+
+      <a class="card" href="#labs">
+        <h2>Lab Exercises</h2>
+        <p>Small standalone pages, each focused on one HTML or CSS technique.</p>
+        <span>Browse labs &rarr;</span>
+      </a>
+    </section>
+
+    <section id="labs">
+      <h2 class="section-title">Lab exercises</h2>
+      <ul class="lab-list">
+        <li><a href="labs/intro.html">01 &middot; Self introduction</a></li>
+        <li><a href="labs/lists.html">02 &middot; Lists</a></li>
+        <li><a href="labs/divs.html">03 &middot; Divs and layout</a></li>
+        <li><a href="labs/img.html">04 &middot; Images</a></li>
+        <li><a href="labs/imgfilter.html">05 &middot; Image filters</a></li>
+        <li><a href="labs/jazz.html">06 &middot; Jazz night poster</a></li>
+        <li><a href="labs/schedule.html">07 &middot; Class schedule</a></li>
+      </ul>
+    </section>
+
+    <footer class="hub-footer">
+      Built for the 2026 fall web programming class.
+    </footer>
+  </main>
+
+</body>
 </html>

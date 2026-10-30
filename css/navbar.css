@@ -1,0 +1,68 @@
+/* Navigation bar shared by every page in /pages */
+
+/* Navbar container */
+.navbar {
+    background-color: #1e293b; /* Dark slate */
+    padding: 0 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Unordered list styles */
+.nav-list {
+    list-style-type: none; /* Removes bullet points */
+    display: flex;         /* Places items horizontally */
+    align-items: center;
+    gap: 0.5rem;           /* Spacing between items */
+}
+
+/* Push the last item (like an action/button) to the right if needed */
+.nav-list .nav-right {
+    margin-left: auto;
+}
+
+/* Links inside list items */
+.nav-link {
+    display: block;
+    color: #cbd5e1;
+    padding: 1rem 1.25rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    text-decoration: underline wavy #fff;
+}
+
+/* Hover and active states */
+.nav-link:hover {
+    color: #ffffff;
+    background-color: #334155;
+}
+
+.nav-link:active {
+    color: #ffffff;
+    background-color: #3b82f6; /* Blue accent */
+}
+
+/* Current page */
+.nav-link.active {
+    color: #ffffff;
+    background-color: #334155;
+    text-decoration: none;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0.5rem 0;
+    }
+
+    .nav-list .nav-right {
+        margin-left: 0;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1rem;
+    }
+}
