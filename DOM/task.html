@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task</title>
+    </head>
+
+    <body>
+        <p id="txt">Nice to meet you!</p>
+        <img src="../images/misc/lenna.jpg" alt="Lenna"><br>
+        
+        <button onclick="addBorder()">Add Border</button>
+        <button onclick="changeColour()">Change Colour</button>
+        
+        <script>
+            const img = document.querySelector("img");
+            const txt = document.getElementById("txt");
+
+            function addBorder() {
+                img.style.border = "5px solid black";
+            }
+
+            function changeColour() {
+                txt.style.color = "blue";
+                txt.style.fontSize = "40px";
+            }
+        </script>
+    </body>
+</html>

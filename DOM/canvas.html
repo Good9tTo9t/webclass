@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                background-color: #fff;
+            }
+            canvas {
+                border: 2px solid #000;
+                background-color: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas id="rectCanvas" width="450" height="250"></canvas>
+
+        <script>
+            const canvas = document.getElementById('rectCanvas');
+            const ctx = canvas.getContext('2d');
+
+            ctx.fillStyle = "#f00";
+            ctx.fillRect(0, 0, 255, 120);
+
+            ctx.fillStyle = 'rgba(0, 0, 255, 0.5)';
+            ctx.fillRect(80, 50, 220, 110)
+        </script>
+    </body>
+</html>

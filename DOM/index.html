@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paragraph Adder</title>
+    </head>
+
+    <body>
+        <p class="intro">Hello</p>
+        <p class="intro">World</p>
+        <p class="note">Goodbye</p>
+
+        <button onclick="addParagraph()">Add Paragraph</button>
+
+        <script>
+            const x = document.querySelectorAll(".intro");
+            const y = document.getElementsByClassName("intro");
+
+            function addParagraph(){
+                const p = document.createElement("p");
+                p.className = "intro";
+                p.innerHTML = "New Paragraph";
+                document.body.appendChild(p); 
+            }
+        </script>
+    </body>
+</html>
