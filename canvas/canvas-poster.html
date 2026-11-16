@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <canvas id="posterCanvas" width="800" height="900"></canvas>
+
+        <script>
+            const canvas = document.getElementById("posterCanvas");
+            const ctx = canvas.getContext("2d");
+
+            ctx.fillStyle = "#F5F2EA";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            const startX = 50;
+            const startY = 100;
+            const boxSize = 350;
+
+            ctx.fillStyle = "#EBC0A3";
+            ctx.fillRect(startX, startY, boxSize, boxSize);
+
+            ctx.fillStyle = "#234B46";
+            ctx.fillRect(startX + boxSize, startY, boxSize, boxSize);
+
+            ctx.fillStyle = "#D57B67";
+            ctx.fillRect(startX, startY + boxSize, boxSize, boxSize);
+
+            ctx.fillStyle = "#E8D4B4";
+            ctx.fillRect(startX + boxSize, startY + boxSize, boxSize, boxSize);
+        </script>
+    </body>
+</html>
+
