@@ -18,17 +18,103 @@
             const startY = 100;
             const boxSize = 350;
 
+            //top left
             ctx.fillStyle = "#EBC0A3";
             ctx.fillRect(startX, startY, boxSize, boxSize);
 
+            //top right
             ctx.fillStyle = "#234B46";
             ctx.fillRect(startX + boxSize, startY, boxSize, boxSize);
 
+            //bot left
             ctx.fillStyle = "#D57B67";
             ctx.fillRect(startX, startY + boxSize, boxSize, boxSize);
 
+            //bot right
             ctx.fillStyle = "#E8D4B4";
             ctx.fillRect(startX + boxSize, startY + boxSize, boxSize, boxSize);
+
+            //panel 1: half cirfle
+            const p1CenterX = startX + boxSize/2;
+            const p1CenterY = startY + 190;
+            ctx.fillStyle = "#A84A36";
+            ctx.beginPath();
+            ctx.arc(p1CenterX, p1CenterY, 105, Math.PI, 0);
+            ctx.fill();
+            //panel 1: line underneath
+            ctx.strokeStyle = "#A84A36";
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(p1CenterX - 105, p1CenterY + 18);
+            ctx.lineTo(p1CenterX + 105, p1CenterY + 18);
+            ctx.stroke();
+
+            // --- PANEL 02: QUARTER SECTORS / 90° (Box: x=400, y=100) ---
+            const p2BoxX = startX + boxSize; // 400
+            const p2BoxY = startY;           // 100
+
+            // 1. Large top-left quarter sector (corner at top-left, curves down-right)
+            ctx.fillStyle = "#F5D59E";
+            ctx.beginPath();
+            ctx.moveTo(p2BoxX + 75, p2BoxY + 75);
+            ctx.arc(p2BoxX + 75, p2BoxY + 75, 165, 0, Math.PI / 2); // 3 o'clock to 6 o'clock
+            ctx.closePath();
+            ctx.fill();
+
+            // 2. Small bottom-right quarter sector (corner at bottom-right, curves up-left)
+            ctx.fillStyle = "#DF8D73";
+            ctx.beginPath();
+            ctx.moveTo(p2BoxX + 240, p2BoxY + 240);
+            ctx.arc(p2BoxX + 240, p2BoxY + 240, 70, Math.PI, 1.5 * Math.PI); // 9 o'clock to 12 o'clock
+            ctx.closePath();
+            ctx.fill();
+
+
+            // --- PANEL 03: THREE QUARTERS / 270° (Box: x=50, y=450) ---
+            const p3BoxX = startX;           // 50
+            const p3BoxY = startY + boxSize; // 450
+
+            // 1. Large 270° cream sector (missing top-right quadrant)
+            ctx.fillStyle = "#EFE7D6";
+            ctx.beginPath();
+            ctx.moveTo(p3BoxX + 170, p3BoxY + 165);
+            ctx.arc(p3BoxX + 170, p3BoxY + 165, 110, 0, 1.5 * Math.PI); // 3 o'clock all the way around to 12 o'clock
+            ctx.closePath();
+            ctx.fill();
+
+            // 2. Offset 90° dark brown cutout wedge in top-right
+            ctx.fillStyle = "#76382C";
+            ctx.beginPath();
+            ctx.moveTo(p3BoxX + 190, p3BoxY + 145);
+            ctx.arc(p3BoxX + 190, p3BoxY + 145, 68, 1.5 * Math.PI, 0); // 12 o'clock to 3 o'clock
+            ctx.closePath();
+            ctx.fill();
+
+
+            // --- PANEL 04: OPEN ARCS / 120° (Box: x=400, y=450) ---
+            const p4CenterX = startX + boxSize + boxSize / 2; // 575
+            const p4CenterY = startY + boxSize + 225;         // 675
+
+            // Centered at top (270° / -90°), spanning 60° to the left and 60° to the right = 120° total
+            const arcStart = Math.PI + Math.PI / 6; // 210°
+            const arcEnd = -Math.PI / 6;            // 330° (-30°)
+
+            ctx.lineCap = "butt"; // Flat, crisp ends
+
+            // 1. Outer thick dark teal arc
+            ctx.strokeStyle = "#274B47";
+            ctx.lineWidth = 22;
+            ctx.beginPath();
+            ctx.arc(p4CenterX, p4CenterY, 105, arcStart, arcEnd);
+            ctx.stroke();
+
+            // 2. Inner thinner terracotta arc
+            ctx.strokeStyle = "#C45943";
+            ctx.lineWidth = 14;
+            ctx.beginPath();
+            ctx.arc(p4CenterX, p4CenterY, 68, arcStart, arcEnd);
+            ctx.stroke();
+
         </script>
     </body>
 </html>
